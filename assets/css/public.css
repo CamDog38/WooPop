@@ -1,0 +1,219 @@
+/* assets/css/public.css */
+
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+/* Container */
+.woopop-container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px 10px;
+    text-align: center;
+    background-color: #ffffff; /* Default, overridden by inline style */
+    color: #333333;            /* Default, overridden by inline style */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif; /* Default, overridden by inline style */
+}
+
+/* Profile Image */
+.woopop-container .woopop-profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* Form Container */
+.woopop-container .woopop-form-container {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+
+/* Profile Name */
+.woopop-container .woopop-profile-name {
+    font-size: 1.5em;
+    margin: 0 0 10px;
+}
+
+/* Profile Description */
+.woopop-container .woopop-profile-description {
+    font-size: 1em;
+    margin: 0 0 20px;
+    padding: 0 20px;
+}
+
+/* Links */
+.woopop-container .woopop-links {
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Cards */
+.woopop-container .woopop-card {
+    width: 100%;
+    background-color: var(--card-bg-color, #f9f9f9); /* Use CSS variable */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    text-align: center;
+    color: var(--card-text-color, #333333); /* Use CSS variable */
+}
+
+.woopop-container .woopop-card img {
+    width: 100%;
+    display: block;
+}
+
+.woopop-container .woopop-card .woopop-link-name {
+    padding: 10px;
+    font-size: 1em;
+    color: inherit; /* Use inherited color */
+    background-color: transparent;
+    text-align: center;
+}
+
+/* Link Buttons */
+.woopop-container .woopop-link {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    color: var(--button-text-color, #ffffff);
+    text-decoration: none;
+    background-color: var(--button-color, #0073aa); /* Use CSS variable */
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    text-align: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.woopop-container .woopop-link:hover {
+    background-color: var(--button-hover-color, #005a87);
+    color: var(--hover-text-color, #ffffff);
+}
+
+/* Link Images */
+.woopop-container .woopop-link-image {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+/* Social Links Container */
+.woopop-container .woopop-social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* Social Icon Links */
+.woopop-container .woopop-social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    color: #333;
+    font-size: 24px;
+    background-color: #f1f1f1;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.woopop-container .woopop-social-icon:hover {
+    background-color: #ddd;
+    color: #000;
+}
+
+.woopop-container .woopop-social-icon i {
+    vertical-align: middle;
+}
+
+/* Back to Top Icon */
+.woopop-container .woopop-back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #0073aa;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.woopop-container .woopop-back-to-top:hover {
+    background-color: #005a87;
+}
+
+/* Hover effects for Cards */
+.woopop-container .woopop-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+/* Media Queries for Smaller Devices */
+@media screen and (max-width: 600px) {
+    .woopop-container .woopop-profile-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .woopop-container .woopop-profile-name {
+        font-size: 1.25em;
+    }
+
+    .woopop-container .woopop-profile-description {
+        font-size: 0.95em;
+    }
+
+    .woopop-container .woopop-link {
+        padding: 12px;
+        font-size: 0.95em;
+    }
+}
+
+/* Media Queries for Larger Devices */
+@media screen and (min-width: 768px) {
+    .woopop-container {
+        padding: 40px 20px;
+    }
+
+    .woopop-container .woopop-profile-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .woopop-container .woopop-profile-name {
+        font-size: 2em;
+    }
+
+    .woopop-container .woopop-profile-description {
+        font-size: 1.2em;
+    }
+
+    .woopop-container .woopop-link {
+        font-size: 1.1em;
+        padding: 18px;
+    }
+}

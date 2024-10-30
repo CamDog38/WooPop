@@ -1,0 +1,424 @@
+/* assets/css/admin.css */
+
+/* General Styles */
+#woopop-settings-page .woopop-settings-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.woopop-settings-form {
+    width: 100%;
+    max-width: 700px;
+}
+
+/* Mobile Preview */
+.woopop-mobile-preview {
+    position: relative;
+    width: 320px;
+    height: 640px;
+    background-color: #333;
+    border-radius: 40px;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+/* Phone Frame Using CSS */
+.woopop-mobile-preview::before,
+.woopop-mobile-preview::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.woopop-mobile-preview::before {
+    top: -10px;
+    width: 120px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 10px;
+}
+
+.woopop-mobile-preview::after {
+    bottom: -30px;
+    width: 80px;
+    height: 40px;
+    background-color: #333;
+    border-radius: 40px 40px 20px 20px;
+}
+
+/* Video Preview Placeholder */
+.woopop-video-container iframe,
+.woopop-video-container video {
+    width: 100%;
+    height: auto;
+}
+
+.woopop-video-preview {
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.woopop-video-preview p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Form Preview Placeholder */
+.woopop-form-preview {
+    width: 100%;
+    padding: 20px;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.woopop-form-preview p {
+    margin: 0;
+    font-size: 16px;
+}
+
+
+/* Mobile Screen */
+.woopop-mobile-screen {
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    width: 300px;
+    height: 600px;
+    background-color: #fff;
+    border-radius: 30px;
+    overflow-y: auto;
+    padding: 20px; /* Added padding */
+    box-sizing: border-box; /* Ensure padding doesn't affect total width */
+}
+
+/* Adjust content inside the mobile screen */
+.woopop-mobile-screen .woopop-profile,
+.woopop-mobile-screen .woopop-links,
+.woopop-mobile-screen .woopop-social-links {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+/* Tab Navigation */
+.woopop-tab-navigation .nav-tab {
+    cursor: pointer;
+}
+
+.woopop-tab-navigation .nav-tab-active {
+    background-color: #0073aa;
+    color: #fff;
+}
+
+/* Tab Content */
+.woopop-tab-content {
+    display: none;
+}
+
+.woopop-tab-content.active {
+    display: block;
+}
+
+/* Repeater Items */
+.woopop-repeater-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.woopop-repeater-item {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.woopop-repeater-item > * {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.woopop-repeater-handle {
+    cursor: move;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Link Fields */
+.woopop-link-field {
+    width: 100%;
+}
+
+.woopop-link-type {
+    width: 100%;
+}
+
+.woopop-link-field input,
+.woopop-link-field select,
+.woopop-repeater-item input[type="text"],
+.woopop-repeater-item select {
+    width: 100%;
+}
+
+/* Ensure all fields in Links tab are the same length */
+.woopop-repeater-item input,
+.woopop-repeater-item select {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+.button.woopop-remove-link,
+.button.woopop-remove-mobile-link {
+    background-color: #dc3232;
+    color: #fff;
+    border: none;
+}
+
+.button.woopop-remove-link:hover,
+.button.woopop-remove-mobile-link:hover {
+    background-color: #a00;
+}
+
+/* Mobile Links Table */
+.woopop-mobile-links-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.woopop-mobile-links-table th,
+.woopop-mobile-links-table td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    vertical-align: top;
+}
+
+.woopop-mobile-links-table th {
+    background-color: #f1f1f1;
+    text-align: left;
+}
+
+/* URL Input */
+.woopop-url-input {
+    display: flex;
+    align-items: center;
+}
+
+.woopop-base-url {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.slug-input {
+    flex: 1;
+}
+
+.woopop-generated-url {
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Add Link Buttons */
+.woopop-add-link,
+.woopop-add-mobile-link {
+    margin-top: 10px;
+}
+
+/* Cards */
+.woopop-card {
+    width: 100%;
+    background-color: #f9f9f9; /* Default, overridden by inline style */
+    border-radius: 8px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.woopop-card img {
+    width: 100%;
+    display: block;
+}
+
+.woopop-card .woopop-link-name {
+    padding: 10px;
+    font-size: 1em;
+    color: #333; /* Default, overridden by inline style */
+    background-color: transparent;
+    text-align: center;
+}
+
+/* Link Buttons */
+.woopop-link {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 15px;
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0073aa; /* Default, overridden by inline style */
+    border-radius: 5px;
+    font-size: 1em;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-align: center;
+}
+
+/* Hover Effects */
+.woopop-link:hover {
+    background-color: #005a87; /* Default, overridden by inline style */
+    color: #ffffff; /* Default, can be adjusted via inline styles */
+}
+
+.woopop-card:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+
+
+/* Preview */
+.woopop-mobile-screen .woopop-profile,
+#woopop-preview-title,
+#woopop-preview-description {
+    text-align: center;
+}
+
+#woopop-preview-image {
+    display: block;
+    margin: 0 auto 15px;
+    max-width: 100px;
+    border-radius: 50%;
+}
+
+/* Social Links in Preview */
+.woopop-social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.woopop-social-icon {
+    width: 30px;
+    height: 30px;
+    background-color: #f1f1f1;
+    color: #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.woopop-social-icon i {
+    font-size: 16px;
+}
+
+/* Back to Top Button in Preview */
+#woopop-preview-back-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #0073aa;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: none; /* Hidden by default */
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#woopop-preview-back-to-top:hover {
+    background-color: #005a87;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .woopop-repeater-item {
+        width: 100%;
+    }
+
+    .woopop-settings-container {
+        flex-direction: column;
+    }
+
+    .woopop-mobile-preview {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+
+    .woopop-url-input {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .woopop-base-url {
+        margin-bottom: 5px;
+    }
+}
+
+/* Profile Tab Styles */
+.woopop-bio-section .form-table th,
+.woopop-bio-section .form-table td {
+    padding: 10px;
+}
+
+.woopop-image-preview-wrapper {
+    margin-bottom: 10px;
+}
+
+#woopop-bio-image-preview {
+    border: 1px solid #ddd;
+    padding: 5px;
+    background-color: #fff;
+    max-width: 150px;
+}
+
+.woopop-social-media-table {
+    width: 100%;
+}
+
+.woopop-social-media-table th,
+.woopop-social-media-table td {
+    padding: 8px;
+}
+
+.woopop-social-media-table input {
+    width: 100%;
+}
+
+/* Remove Link Button */
+.button.woopop-remove-link,
+.button.woopop-remove-mobile-link {
+    background-color: #dc3232;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.button.woopop-remove-link:hover,
+.button.woopop-remove-mobile-link:hover {
+    background-color: #a30000;
+}
+
+/* Fix for Mobile Preview Bleed */
+#woopop-settings-page {
+    overflow: hidden;
+}
